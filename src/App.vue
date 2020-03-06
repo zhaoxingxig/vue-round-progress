@@ -1,17 +1,53 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <component-progress
+      class='upgrade-progress'
+      :isAnimation='options.isAnimation'
+      :isRound='options.isRound'
+      :width='options.width'
+      :radius='options.radius'
+      :progress='options.progressPro * 0.75'
+      :barColor='options.barColors'
+      :duration='options.duration'
+      :timeFunction='options.timeFunction'
+      :backgroundColor='options.backgroundColor'
+      :title='options.title'
+      :number='options.number'
+      >
+    </component-progress>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ComponentProgress from './components/componentProgress'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ComponentProgress
+  },
+  data () {
+    return {
+      options: {
+        width: 120, // 最大环宽度  直径
+        radius: 5, //  环宽
+        progressPro: 50, // 进度百分数
+        barColors: { // 进度渐变色
+          barColorStart: '#3385D0',
+          barColorEnd: '#5AB7F1'
+        },
+        duration: 1000, // 动画时长
+        title: '晚',
+        number: 166,
+        backgroundColor: '#DCDADD', // 进度底色
+        // 动画类型
+        timeFunction: 'cubic-bezier(0.99, 0.01, 0.22, 0.94)',
+        // 是否动画效果
+        isAnimation: true,
+        // 是否圆形描边
+        isRound: true
+      }
+    }
   }
 }
 </script>
