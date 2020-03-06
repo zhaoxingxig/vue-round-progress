@@ -1,3 +1,6 @@
+### 效果图
+
+ 
 # vue-round-progress
 
 ## Project setup
@@ -40,4 +43,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 | timeFunction | 动画类型 | String | 
 | duration | 整个动画时长 | String | 
 | delay | 延迟多久执行 | String | 
+
+
 
