@@ -1,5 +1,5 @@
 ### 效果图
-
+![效果图](https://github.com/zhaoxingxig/vue-round-progress/blob/master/src/assets/img1.png)
  
 # vue-round-progress
 
